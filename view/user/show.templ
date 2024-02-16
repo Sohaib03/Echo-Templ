@@ -1,0 +1,12 @@
+package user
+import (
+    "github.com/Sohaib03/GoTemplate/view/layout"
+    "github.com/Sohaib03/GoTemplate/view/components"
+    "github.com/Sohaib03/GoTemplate/model"
+)
+templ Show(u model.User) {
+    @layout.Base() {
+        <h1>Hello {u.Email} </h1>
+        @components.Input("email", "email")
+    }
+}
